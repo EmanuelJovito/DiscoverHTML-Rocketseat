@@ -1,0 +1,134 @@
+<!--
+  <form>
+    - Elementos que definirá um formulário
+    - É um container estilo <section> <footer>
+
+    Atributos básicos
+    - Action
+    - Method
+-->
+
+<!-- <form action="" method="POST">
+
+</form> -->
+
+<!--
+  <fieldset>
+    - Agrupamento
+    - Mesmo propósito
+    - Semântico
+    - Acessibilidade
+
+    Atributos especiais
+    - Disabled
+      - Desabilita todos os elementos internos
+      - Não serão enviados ao submeter o formulário
+    
+    - Form
+      - O id de um formulário ao qual esse fieldset pertence 
+      - Não precisa estar dentro do formulário
+
+    - Name
+      - Nome do grupo
+    
+    <legend>
+      - Nome do agrupamento
+      - Primeiro elemento dentro do fieldset
+-->
+
+<!-- <form action="">
+  <fieldset>
+    <legend>Contado</legend>
+    <input placeholder="esreva aqui">
+    <button type="reset">entrada</button>
+  </fieldset>
+</form> -->
+
+<!--
+  <label>
+    - Associar e identificar uma (ou mais) tag de entrada de dados
+    - Acessibilidade
+    - Você poderá clicar para mudar o foco da entrada de dados
+
+    Atributos
+    - For
+      - Para fazer a conexão entre esse label e a tag de entrada de dados
+      - É feita via id do input
+      - Só funciona com elementos específicos
+        - button, input(not hidden), meter, output, progress, select, textarea
+-->
+
+<!-- <label for="nome">
+  nome:
+</label>
+<input id="nome" type="text"> -->
+
+<!--
+  <button>
+    - Representa um botão
+    - Usado para enviar formulários
+    - É estilizado pelo user agent
+
+    Atributos comuns
+    - type
+      - submit
+      - reset 
+      - button
+    - autofocus
+    - disabled
+    - name 
+    - value
+    - form 
+-->
+
+<!-- <button>enviar</button> -->
+
+<!--
+  #<datalist>
+
+    - Lista de valores como sugestão a uma tag <input>
+    - Valores sugestivos e não obrigatórios
+    - Usuários poderão selecionar um dos valores, ou colocar um valor diferente da sugestão
+
+    <datalist id="fruitsdata">
+      <option>apple</option>
+      <option>banana</option>
+      <option>mango</option>
+      <option>orange</option>
+      <option>cherry</option>
+    </datalist>
+
+  # list
+
+  - Recebe como valor um id de um <datalist> residente no mesmo documento
+
+  # Tipos de input suportados 
+
+  - text, search, url, tel, email, date, month, week, time, datetime-local, number, range e color.
+
+  * Valores de datalist que não são compatíveis com o tipo do <input> não serão apresentados.
+
+  # Tipos de input não suportados(conforme especificação)
+  
+    - hidden, password, checkbox, radio, file, ou qualquer tipo de button
+
+  # User agent
+
+  Verificar a compatibilidade com o browser https://caniuse.com
+-->
+<input type="text" list="fruitsdata" placeholder="Escolha uma fruta">
+
+<datalist id="fruitsdata">
+  <option>apple</option>
+  <option>banana</option>
+  <option>mango</option>
+  <option>orange</option>
+  <option>cherry</option>
+</datalist>
+
+<datalist id="colorsdata">
+  <option>#ff0000</option>
+  <option>#00ff00</option> 
+</datalist>
+
+<input type="color" list="colorsdata">

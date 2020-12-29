@@ -1,0 +1,65 @@
+<!--
+  Desenhando
+  - Pensar nos requisitos
+  - Ajuda a definir as necessidades
+
+  Dicas:
+  - Simples e focado
+  - Somente dados necessários
+  - Verifique o que te agrada
+-->
+
+<!--
+  Crie um formulário de contato
+
+  1. O formulário deverá conter um título de nome contato. Usar fieldset e legend para isso.
+
+  2. O furmlário conterá 3 campos
+    - nome (input texto)
+    - email (input email)
+    - mensagem (textarea)
+
+  3. O formulário deverá conter um botão para enviar
+
+  Atenção: O formulário deverá conter regras de acessibilidade, como o label para cada campo, por exemplo.
+-->
+
+<form>
+  <fieldset id="formulario">
+    <legend>Contato</legend>
+    <label for="name">Nome</label><br />
+    <input
+      type="text"
+      id="name"
+      name="nome"
+      placeholder="Digite seu nome aqui"
+      required
+    /><br /><br />
+
+    <label for="email">Email</label><br />
+    <input
+      type="email"
+      id="email"
+      name="email"
+      pattern=".+@.+\.com"
+      title="Coloque um email válido"
+      placeholder="Digite seu email aqui"
+      required
+    /><br /><br />
+
+    <label for="mensagem">Mensagem</label><br />
+    <textarea
+      id="mensagem"
+      name="mensagem"
+      cols="19"
+      rows="5"
+      minlength="5"
+      maxlength="250"
+      wrap="on"
+      placeholder="Digite sua mensagem aqui"
+    ></textarea
+    ><br /><br />
+
+    <button type="submit">Enviar</button>
+  </fieldset>
+</form>
